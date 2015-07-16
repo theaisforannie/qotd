@@ -31,7 +31,7 @@ server = TCPServer.new 17
 
 loop do
 	Thread.start(server.accept) do |client|
-		random_index = rand(quotes_array.length + 1)
+		random_index = rand(quotes_array.length)
 		@quote_body = quotes_array[random_index]["Quote"]
 		@quote_author = quotes_array[random_index]["Author"]
 
